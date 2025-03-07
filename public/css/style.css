@@ -1,0 +1,147 @@
+:root {
+    --primary-color: rgba(128, 219, 219, 0.903);
+    --hover-color: #ffcc00;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    color: rgb(11, 13, 13);
+   
+}
+
+
+.f-info {
+    text-align: center;
+}
+
+/* Social Icons Styling */
+.f-info-socials {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.f-info-socials i {
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.f-info-socials i:hover {
+    color: var(--hover-color);
+}
+
+/* Footer Info Links */
+.f-info-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.f-info-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Changed from justify-items */
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    gap: 89px;
+}
+
+.fa-solid{
+    color: #fe424d;
+}
+
+
+
+
+h3 {
+    position: sticky;
+}
+
+.card-img-top {
+    border-radius: 4px;
+}
+
+#imgs {
+    border-radius: 10px;
+}
+#imgs:hover {
+    opacity: 0.8;
+
+    background-color: rgb(157, 11, 186);
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .card {
+        width: 100%; /* Make cards responsive */
+        max-width: 300px; /* Set a max width */
+    }
+}
+
+/* New page */
+
+.add-btn{
+    color: white !important;
+    background-color: #fe424d !important;
+}
+
+.form-body{
+    width: 800px;
+}
+
+/* edit page */
+.edit-btn{
+    color: white !important;
+    background-color: #fe424d !important;
+    margin: 3px 9px;
+}
+
+.edit-form-body{
+    width: 800px;
+}
+
+/* show page */
+.listing-details{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.edit-card{
+    margin-top: 33px;
+    margin-bottom: 33px;
+}
+.delete-btn{
+    color: white !important;
+    background-color: #fe424d !important;
+    margin: 3px 9px;
+}
+.delete-card-body{
+    margin: 3px 9px;
+}
+.delete-card-body:hover{
+    offset: 0.8;
+    background-color: aliceblue;
+}
+.delete-btn:hover{
+    offset: 0.9;
+    
+}

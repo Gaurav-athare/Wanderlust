@@ -1,0 +1,62 @@
+<% layout("/layouts/boilerplate")  -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust</title>
+</head>
+
+<body>
+ 
+  <div class="form-body offset-3">
+  <h3>New Listing</h3>
+  <form method="POST" action="/listings" novalidate class="needs-validation ">
+    <div>
+      <label for="title" class="form-label" class=""></label>
+      <input type="text" name="listing[title]" placeholder="Enter title" required class="form-control">
+      <div class="valid-feedback">Title looks good!</div>
+      <div class="invalid-feedback">Enter a title please</div>
+    </div>
+    
+    <div>
+      <label for="title" class="form-label" class=""></label>
+      <textarea name="listing[description]" placeholder="Enter description" required class="form-control"></textarea>
+      <div class="invalid-feedback">Enter a description please</div>
+    </div>
+
+    <div>
+      <label for="image" class="form-label" class=""></label>
+      <input type="link" placeholder="Enter url link" required class="form-control">
+      
+    </div>
+
+    <div>
+      <label for="price" class="form-label" class=""></label>
+      <input type="number" name="listing[price]" placeholder="Enter price" required class="form-control">
+      <div class="invalid-feedback">Enter a price please</div>
+    </div>
+
+    <div>
+      <label for="location" class="form-label" class=""></label>
+      <input type="text" name="listing[location]" placeholder="Enter location" required class="form-control">
+      <div class="invalid-feedback">Enter a location please</div>
+    </div>
+
+    <div>
+      <label for="title" class="form-label" class="mb-3" class=""></label>
+      <input type="text" name="listing[country]" placeholder="Enter country" required class="form-control">
+      <div class="invalid-feedback">Enter a country please</div>
+    </div>
+  
+    <div style="margin-top: 18px;">
+      <label for="title" class="form-label"  ></label>
+      <button type="submit" class="btn  add-btn" class="form-control">Add Listing</button>
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>

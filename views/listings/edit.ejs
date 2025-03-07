@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate")  -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust</title>
+</head>
+
+<body>
+    <div class="form-body offset-3">
+  <h3>Edit your listing</h3>
+  <!-- //to convert this post request into put we write ?method=PUT because form only take post and get requests.for using put we have to install ->npm i method-override,after installing it we initialize it in the app.js -->
+  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+    <div>
+        <label for="title" class="form-label"  ></label>
+      <input type="text" name="listing[title]" value="<%= listing.title %>" required class="form-control">
+      <div class="invalid-feedback">Enter a title please</div>
+    </div>
+    <div>
+        <label for="title" class="form-label"  ></label>
+      <textarea name="listing[description]" class="form-control"> <%= listing.description%> </textarea>
+      <div class="invalid-feedback">Enter a description please</div>
+    </div>
+    <div>
+        <label for="title" class="form-label"  ></label>
+      <input type="number" name="listing[price]" value="<%= listing.price %>" required class="form-control">
+      <div class="invalid-feedback">Enter a price
+         please</div>
+    </div>
+    <div>
+        <label for="title" class="form-label"  ></label>
+      <input type="text" name="listing[location]" value="<%= listing.location %>" required class="form-control">
+      <div class="invalid-feedback">Enter a location please</div>
+    </div>
+    <div>
+        <label for="title" class="form-label"  ></label>
+      <input type="text" name="listing[country]" value="<%= listing.country %>" required class="form-control">
+      <div class="invalid-feedback">Enter a country please</div>
+    </div>
+    <div style="margin-top: 18px;">
+        <label for="title" class="form-label"  ></label>
+      <button  class=" btn edit-btn" type="submit" class="form-control">Edit Listing</button 
+    </div>
+
+
+  </form>
+</div>
+</body>
+
+</html>
